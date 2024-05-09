@@ -1,8 +1,5 @@
 # Movie Recommendation System
 
-## Introduction
-This 
-
 ## Data
 The data used in this project is from the MovieLens dataset. This dataset was collected by the GroupLens Research Project at the University of Minnesota. The dataset contains 100,000 ratings and 3,600 tag applications applied to 9,000 movies by 600 users. The dataset can be found [here](https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset/).
 
