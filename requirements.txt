@@ -1,0 +1,13 @@
+pandas
+numpy
+flask
+requests
+streamlit
+scikit-learn
+ipykernel
+ipywidgets
+matplotlib
+seaborn
+jupyterlab_widgets
+jupyterlab
+flask-swagger-ui
