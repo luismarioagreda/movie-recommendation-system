@@ -1,8 +1,13 @@
+import os
 from io import BytesIO
 
+import dotenv
 import requests
 import streamlit as st
 from PIL import Image
+
+dotenv.load_dotenv()
+API_URL = os.getenv("API_URL")
 
 st.title(":red[Notflix]")
 
@@ -17,7 +22,7 @@ if "search_results" not in st.session_state:
 
 # Send request to Flask API when button clicked
 if st.button("Search"):
-    response = requests.post("http://127.0.0.1:5000/search", json={"title": user_input})
+    response = requests.post(f"{API_URL}/search", json={"title": user_input})
     st.session_state.search_results = response.json()
 
 # Display search results
@@ -34,7 +39,7 @@ if st.session_state.selected_movie:
 
     # Display the rating histogram
     response = requests.post(
-        "http://127.0.0.1:5000/visualize",
+        f"{API_URL}/visualize",
         json={"movieId": selected_movie["movieId"]},
     )
     img_data = response.content
@@ -43,7 +48,7 @@ if st.session_state.selected_movie:
 
     # Display recommendations for the selected movie
     response = requests.post(
-        "http://127.0.0.1:5000/recommendations",
+        f"{API_URL}/recommendations",
         json={"movieId": selected_movie["movieId"]},
     )
     results = response.json()

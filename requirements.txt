@@ -11,3 +11,4 @@ seaborn
 jupyterlab_widgets
 jupyterlab
 flask-swagger-ui
+python-dotenv
