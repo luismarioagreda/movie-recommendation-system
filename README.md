@@ -33,4 +33,4 @@ python app.py
 ```
 
 ## Conclusion
-This project used a lot of python libraries that helped me along the way. I used pandas to manipulate the data, numpy to perform mathematical operations, and scikit-learn to build the model. I also used matplotlib and seaborn to create visualizations. I also used streamlit to create a web app to interact with the data. I learned a lot about collaborative filtering and how it can be used to build a recommendation system. I also learned how to use the MovieLens dataset and how to manipulate it to get the data I needed.
+This project used a lot of python libraries that helped me along the way. I used pandas to manipulate the data, numpy to perform mathematical operations, and scikit-learn to build the model. I also used matplotlib to create visualizations. I also used streamlit to create a web app to interact with the data. I learned a lot about collaborative filtering and how it can be used to build a recommendation system. I also learned how to use the MovieLens dataset and how to manipulate it to get the data I needed.
