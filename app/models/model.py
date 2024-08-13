@@ -11,8 +11,13 @@ import seaborn as sns
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-movies = pd.read_parquet("/data/movies.parquet")
-ratings = pd.read_parquet("/data/ratings.parquet")
+import os
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, '..', '..'))
+
+movies = pd.read_parquet(os.path.join(project_root, "data", "movies.parquet"))
+ratings = pd.read_parquet(os.path.join(project_root, "data", "ratings.parquet"))
 
 
 def clean_title(title):
